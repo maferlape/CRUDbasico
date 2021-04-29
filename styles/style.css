@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(55, 55, 126);
+    font-size: 87,5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --------------------Fórmulario----------------------- */
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0 2rem 0; 
+}
+
+.container-form h1{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.container-form .items{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+label{
+    color: white;
+}
+
+input{
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    font-weight: 800; 
+    color: rgb(59, 54, 54);    
+}
+
+/* ------------------------Buttons------------------------ */
+
+#create{
+    grid-area: uno;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#enter{
+    grid-area: dos;
+    border-radius: 0.5rem;
+}
+
+#edit{
+    grid-area: tres;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#list{
+    grid-area: cuatro;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#deletar{
+    grid-area: cinco;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#edit, #deletar{
+    background-color: rgb(170, 60, 41);
+    color: #ffff;
+    transition: 200ms;
+}
+
+#edit:hover, #deletar:hover{
+    background-color: rgb(153, 85, 73);;
+}
+
+#list, #create, #enter{
+    color:  rgb(55, 55, 126);
+    background-color: #ffffff;
+    transition: 200ms;
+}
+
+#create:hover, #list:hover, #enter:hover{
+    background-color: #f1e8e8;
+}
+
+.buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 1rem 0.2rem ;
+    margin: 0 0 1.5rem 0;
+    grid-template-areas: 
+    "uno cuatro"
+    "tres cinco"
+    "dos dos";
+}
+
+.buttons button{
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ------------------Tabela-------------------- */
+#Registros{
+    display: block;
+    width: 100%; 
+    overflow-x: auto;  
+}
+
+.data-table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color:#0f0cbd;
+    font-size: 1rem;
+} 
+
+h3{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 0 2rem 0;
+}
+
+td{
+    background: #ffffff;
+    padding: 1rem 2rem;
+}
+
+table th{
+    background: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2rem;
+
+    text-align: left;
+    color: #0f0cbd;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+}
+
+table tbody td{
+    background: #ffffff;
+    padding: 1rem 2rem;
+} 
+
+footer{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10rem;
+}
+
+.edit-button, .delete-button {
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+    font-weight: 600;
+}
+
+.edit-button img, .delete-button img{
+    width: 25px;
+    height: 25px;
+}
+
+/* ----------------------------Responsive-------------------------- */
+@media(min-width: 800px){
+
+    html{
+        font-size: 93.75%;   
+    }
+
+    .container{
+        display: block;
+    }
+
+    .container-form{
+        /* max-width: 800px; */
+        width: 100%;
+    }
+
+    .container-form{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+    }
+
+    .inputs{
+        width: 100%;
+        margin: 2rem 3rem 0 0;
+        align-items: flex-start;
+    }
+
+    .buttons{
+        margin: 0 0 1rem 0;
+    }
+
+    h3{
+        text-align: initial;
+    }
+
+}
