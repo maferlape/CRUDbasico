@@ -1,5 +1,5 @@
 //crea a base de dados
-var db=openDatabase("CRUDbasico", "1.0", "CRUDbasico", 65535)
+var db=openDatabase("CRUDbas", "1.0", "CRUDbas", 6985)
 
 var nuevoId;
 
