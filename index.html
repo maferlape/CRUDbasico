@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,600;0,700;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>CRUD básico</title>
+</head>
+<body>
+
+    <div class="container">
+        <form action="">
+            <div class="container-form">
+                <div class="inputs">
+                    <h1>Registrar Pessoa</h1>
+                    <div class="items">
+                        <label for="Name">Nome</label>
+                        <input type="text" class="form-control" id="name"required>
+                    </div>
+
+                    <div class="items">
+                        <label for="Nascimiento">Data de aniversário</label>
+                        <input type="date" class="form-control" id="birth" required>
+                    </div>
+
+                    <div class="items">
+                        <label for="CPF">CPF</label>
+                        <input type="text" id="cpf" required>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button type="button" id="create">Criar a tabela</button>
+                    <button type="button" id="enter">Registrar</button>
+                    <button type="button" id="edit">Modificar registro</button>
+                    <button type="button" id="list">Actualizar/Mostrar Registro</button>
+                    <button type="button" id="deletar">Eliminar Registros</button>
+                </div>
+            </div>
+            
+        </form>
+
+        <section id="Registros">
+            <h3>PESSOAS REGISTRADAS</h3>
+            <table id="listaPessoas" class="data-table"></table>
+        </section>
+    </div>
+
+    <footer>
+        <p>CRUD básico - María Lares</p>
+    </footer>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/crud.js"></script>
+
+</body>
+</html>
